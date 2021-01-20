@@ -1,20 +1,44 @@
 ---
-name: Getting Started
+name: Gateway Manual
 route: /
 ---
 
-# Getting Started
+# Gateway Manual
 
-Design systems enable teams to build better products faster by making design reusable—reusability makes scale possible. This is the heart and primary value of design systems. A design system is a collection of reusable components, guided by clear standards, that can be assembled together to build any number of applications.
+![Gateway](./gw.jpg)
 
-Regardless of the technologies and tools behind them, a successful design system follows these guiding principles:
+## DHCP
 
-- **It’s consistent**. The way components are built and managed follows a predictable pattern.
-- **It’s self-contained**. Your design system is treated as a standalone dependency.
-- **It’s reusable**. You’ve built components so they can be reused in many contexts.
-- **It’s accessible**. Applications built with your design system are usable by as many people as possible, no matter how they access the web.
-- **It’s robust**. No matter the product or platform to which your design system is applied, it should perform with grace and minimal bugs.
+DHCP client is enabled by default. If no DHCP server in the local network, the gatway falls back to IP of 192.168.1.23/24.
 
-## Consistency
+## Default SSH Crediential 
 
-Your first, most important task when starting out is to define the rules of your system, document them, and ensure that everyone follows them. When you have clearly documented code standards and best practices in place, designers and developers from across your organization can easily use and, more importantly, contribute to your design system.
+```
+Login Username: pi
+Login Password: invisiblefun
+```
+
+## Update Radio Setting
+
+Edit the file at **/opt/ifs/packet_forwarder/lora_pkt_fwd/global_conf.json**
+
+The gateway has 8 channels. The Radio 0 and 1 is the central frequency. The frequency of each channels needs to specify positive and negative adjustment depending on the frequency of the radio.
+
+For example:
+
+1. open `global_conf.json` and adjust the field `if` of the radio accordingly.
+
+```json
+"chan_multiSF_0": {
+  "desc": "Lora MAC, 125kHz, all SF, 920.9MHz",
+  "enable": true,
+  "radio": 0,
+  "if": -400000
+}
+```
+
+2. Restart `packet-forwarder` service after modification of configuration file.
+
+```bash
+sudo systemctl restart packet-forwarder
+```
