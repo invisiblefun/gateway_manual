@@ -1,10 +1,10 @@
 {
-  "name": "docz-example-basic",
+  "name": "gateway-manual",
   "version": "2.0.0",
   "license": "proprietary",
   "scripts": {
     "dev": "docz dev",
-    "build": "docz build",
+    "build": "docz build && mv .docz/dist docs",
     "serve": "docz serve"
   },
   "dependencies": {
