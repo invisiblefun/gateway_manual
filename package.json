@@ -4,7 +4,7 @@
   "license": "proprietary",
   "scripts": {
     "dev": "docz dev",
-    "build": "docz build && mv .docz/dist docs",
+    "build": "docz build && rm -rf docs && mv .docz/dist docs",
     "serve": "docz serve"
   },
   "dependencies": {
