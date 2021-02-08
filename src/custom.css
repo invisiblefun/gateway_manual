@@ -1,0 +1,30 @@
+@media print {
+    @page {
+      margin: 1.2cm;
+    }
+    main>div:nth-child(2) {
+      display: block;
+    }
+    div[data-testid="header"] {
+      display: none;
+    }
+    div[data-testid="sidebar"] {
+      display: none;
+    }
+    div[data-testid="main-container"]{
+        font-size: 12px;
+    }
+    table[aria-label="a dense table"]{
+        font-size: 8px;
+    }
+    .pagebreak { page-break-before: always; } 
+  }
+
+  table, td, th {
+    border: 1px solid black;
+  }
+  
+  table {
+    width: 100%;
+    border-collapse: collapse;
+  }
