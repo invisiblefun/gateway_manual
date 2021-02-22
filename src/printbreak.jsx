@@ -3,7 +3,7 @@ import "./custom.css";
 
 export function Printbreak(){
     return(
-        <div class="pagebreak"></div>
+        <div className="pagebreak"></div>
     )
 }
 

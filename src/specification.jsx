@@ -130,7 +130,7 @@ export function DenseTable() {
                 <td >10W</td>
             </tr>
             <tr >
-                <th colspan="2">
+                <th colSpan="2">
                     <div>
                         <h4>Connectors</h4>
                     </div>
@@ -142,7 +142,7 @@ export function DenseTable() {
                     Ethernet 10/100 Port POE</td>
             </tr>
             <tr >
-                <th colspan="2">
+                <th colSpan="2">
                     <div>
                         <h4>Physical Description</h4>
                     </div>
@@ -170,7 +170,7 @@ export function DenseTable() {
                 </td>
             </tr>
             <tr >
-                <th colspan="2">
+                <th colSpan="2">
                     <div>
                         <h4>Enviromental</h4>
                     </div>
@@ -200,7 +200,7 @@ export function DenseTable() {
                 <td >IP67</td>
             </tr>
             <tr >
-                <th colspan="2">
+                <th colSpan="2">
                     <div>
                         <h4>Installation</h4>
                     </div>
